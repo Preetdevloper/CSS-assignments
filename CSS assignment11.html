@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: #f4f4f4;
+            position: static; /* Default for all elements */
+        }
+        
+        .static {
+            background-color: #e0f7fa;
+        }
+        
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background-color: #ffecb3;
+        }
+        
+        .absolute {
+            position: absolute;
+            top: 10px;
+            left: 250px;
+            background-color: #c5e1a5;
+            width: 300px;
+            z-index: 1;
+        }
+        
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #ffab91;
+            width: 200px;
+        }
+        
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: #90caf9;
+            border: 2px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Positioning</h1>
+    <div class="box static">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qobmewiBPpYsOv4gG_M_Suzr4TQuOLd5pKg88hCWDNh_IimbboTbadADxHLJDlnqAgA&usqp=CAU">
+        <h2>Static Positioning (Default)</h2>
+        <p>This element is statically positioned, which is the default positioning for elements. It follows the normal document flow.</p>
+    </div>
+    <div class="box relative">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qobmewiBPpYsOv4gG_M_Suzr4TQuOLd5pKg88hCWDNh_IimbboTbadADxHLJDlnqAgA&usqp=CAU">
+        <h2>Relative Positioning</h2>
+        <p>This element is relatively positioned. It is moved relative to its normal position, but it still occupies space in the normal document flow.</p>
+    </div>
+    <div class="box absolute">
+        <h2>Absolute Positioning</h2>
+        <p>This element is absolutely positioned. It is removed from the normal document flow and positioned relative to its nearest positioned ancestor or the initial containing block (if none exists).</p>
+    </div>
+    <div class="box fixed">
+        <h2>Fixed Positioning</h2>
+        <p>This element is fixed. It stays in the same position relative to the viewport even when scrolling.</p>
+    </div>
+    <div class="box sticky">
+        <h2>Sticky Positioning</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qobmewiBPpYsOv4gG_M_Suzr4TQuOLd5pKg88hCWDNh_IimbboTbadADxHLJDlnqAgA&usqp=CAU">
+        <p>This element is sticky. It behaves like a relative element until it reaches a specific point, after which it becomes fixed.</p>
+    </div>
+</body>
+</html>

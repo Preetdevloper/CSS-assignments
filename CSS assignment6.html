@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced flexbox</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+          
+        }
+        .header{
+            text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            padding: 50px;
+            border-style: solid;
+            border-color: brown;
+            border-width: 10px;
+        }
+        .container2{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            padding: 50px;
+            margin-left:auto;
+            margin-right:50px;
+            justify-content: center;
+            border-style: solid;
+            box-sizing: border-box;
+            border-width: 10px;
+            border-color: rgb(165, 136, 42);
+        }
+        .imp{
+            display:block;
+            margin: 15px;
+        }
+        .sidebar{
+            display:inline-block;
+            height:100%;
+            margin-left:0px;
+            padding :20px;
+            height:300px;
+            width:200px;
+            border-style: solid;
+            box-sizing: content-box;
+            border-width: 10px;
+            border-color: rgb(42, 142, 165);
+        }
+        .content{
+            display:flex;
+            flex-direction: row;
+        }
+        .footer{
+            display:inline-block;
+            border-style: solid;
+            box-sizing: border-box;
+            width: 100%;
+            height:125px;
+            margin-top: 25px;
+            border-width: 10px;
+            border-color: rgb(42, 165, 116);
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="header">Header</div>
+        <div class="main-container">
+            <div class="content">
+            <div class="sidebar">Sidebar</div>
+                <div class="container2">
+                    <div class="imp">Item 1</div>
+                    <div class="imp">Item 2</div>
+                    <div class="imp">Item 3</div>
+                    <div class="imp">Item 4</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

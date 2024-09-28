@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .container{
+            text-align: center;
+            align-items: center;
+        }
+        
+        /* Common box styles */
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #0d125d;
+            background-color: #6d0d0d;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 10);
+        }
+        
+        /* Specific boxes with z-index applied */
+        
+        /* Box 1 with a low z-index */
+        .box1 {
+            top: 50px;
+            left: 50px;
+            background-color: #f8bbd0;
+            z-index: 1;
+        }
+        
+        /* Box 2 with a higher z-index */
+        .box2 {
+            top: 100px;
+            left: 100px;
+            background-color: #b3e5fc;
+            z-index: 3;
+        }
+        
+        /* Box 3 with the highest z-index */
+        .box3 {
+            top: 150px;
+            left: 150px;
+            background-color: #c5e1a5;
+            z-index: 5;
+        }
+        
+        /* Box 4 with a negative z-index */
+        .box4 {
+            top: 200px;
+            left: 200px;
+            background-color: #ffcc80;
+            z-index:10;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Z-Index and Positioning</h1>
+
+    <div class="container">
+        
+        <div class="box box1">
+            <h2>Box 1 (z-index: 1)</h2>
+        </div>
+
+        
+        <div class="box box2">
+            <h2>Box 2 (z-index: 3)</h2>
+        </div>
+
+        <div class="box box3">
+            <h2>Box 3 (z-index: 5)</h2>
+        </div>
+
+        <div class="box box4">
+            <h2>Box 4 (z-index: 10)</h2>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

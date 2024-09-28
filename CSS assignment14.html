@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            border: 2px solid #333;
+            background-color: #cccfde;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        @keyframes moveAndChangeColor {
+            0% {
+                background-color: #aa0b43;
+                transform: translateX(0);
+            }
+            50% {
+                background-color: #b3e5fc;
+                transform: translateX(100px);
+            }
+            100% {
+                background-color: #c21ca4;
+                transform: translateX(0);
+            }
+        }
+        
+        .box1 {
+            animation: moveAndChangeColor 3s ease-in-out infinite;
+        }
+        
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+        
+        .box2 {
+            animation: bounce 1s ease-in-out infinite;
+        }
+        
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .box3 {
+            animation: spin 2s linear 0.5s infinite;
+        }
+     </style>
+</head>
+<body>
+  
+
+    <h1>CSS Animations Demonstration</h1>
+
+    <div class="container">
+        <div class="box box1">
+            <p>Animation 1</p>
+        </div>
+
+        
+        <div class="box box2">
+            <p>Animation 2</p>
+        </div>
+
+        <div class="box box3">
+            <p>Animation 3</p>
+        </div>
+    </div>
+
+
+</body>
+</html>

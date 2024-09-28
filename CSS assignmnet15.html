@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        /* Common box styles */
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            border: 2px solid #333;
+            background-color: #f4f4f4;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.5s ease;
+        }
+        
+        /* Box 1: Translate transform */
+        .box1:hover {
+            transform: translate(100px, 50px); /* Moves the box 100px right and 50px down */
+            background-color: #ffab91;
+        }
+        
+        /* Box 2: Rotate transform */
+        .box2:hover {
+            transform: rotate(45deg); /* Rotates the box 45 degrees */
+            background-color: #b3e5fc;
+        }
+        
+        /* Box 3: Scale transform */
+        .box3:hover {
+            transform: scale(1.5); /* Scales the box by 1.5 times its original size */
+            background-color: #c5e1a5;
+        }
+        
+        /* Box 4: Skew transform */
+        .box4:hover {
+            transform: skew(20deg, 10deg); /* Skews the box by 20 degrees along the X-axis and 10 degrees along the Y-axis */
+            background-color: #ffcc80;
+        }
+        
+        /* Box 5: Combined transform (Translate, Rotate, Scale) */
+        .box5:hover {
+            transform: translate(50px, 30px) rotate(30deg) scale(1.2); /* Combines translation, rotation, and scaling */
+            background-color: #ce93d8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Transforms Demonstration</h1>
+
+    <div class="container">
+        
+        <div class="box box1">
+            <p>Translate</p>
+        </div>
+
+        <div class="box box2">
+            <p>Rotate</p>
+        </div>
+
+        <div class="box box3">
+            <p>Scale</p>
+        </div>
+
+       
+        <div class="box box4">
+            <p>Skew</p>
+        </div>
+
+        
+        <div class="box box5">
+            <p>Combined (Translate, Rotate, Scale)</p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

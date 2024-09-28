@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic gridbox</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        body{
+            display: grid;
+            grid-template: 1fr 2fr 1fr;
+            grid-gap:50px;
+            align-items: center;
+        }
+        #header{
+            box-sizing: border-box;
+            border-style: solid;
+            border-color: rgb(55, 0, 255);
+            border-width:8px;
+            text-align: center;
+          
+        }
+        #content{
+           
+            display:flex;
+            text-align: center;
+        
+        
+        }
+        #first{
+            display:inline-block;
+            box-sizing: border-box;
+            border-style: solid;
+            border-color: rgb(238, 255, 0);
+            margin-right:10px;
+            padding:10px;
+            height:500px;
+        }
+        #second{
+            display:inline-block;
+            box-sizing: border-box;
+            border-style: solid;
+            border-color: rgb(238, 255, 0);
+            margin-left:10px;
+            padding:10px;
+            height:500px;
+        }
+        #footer{
+            box-sizing: border-box;
+            border-style: solid;
+            border-color: rgb(255, 140, 0);
+            border-width:8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        Header
+    </header>
+    <div id="content">
+        <div id="first">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nobis quos error est dolorum saepe minima, et, voluptas corrupti ut cupiditate blanditiis aliquid cumque fugiat tempora hic soluta illo. Deserunt.
+        </div>
+        <div id="second">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nobis quos error est dolorum saepe minima, et, voluptas corrupti ut cupiditate blanditiis aliquid cumque fugiat tempora hic soluta illo. Deserunt.
+        </div>
+    </div>
+    <footer id="footer">
+        Footer
+    </footer>
+</body>
+</html>

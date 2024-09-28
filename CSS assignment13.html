@@ -1,0 +1,97 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .box {
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border: 2px solid #333;
+            background-color: #f4f4f4;
+            transition: all 0.3s ease; /* Default transition */
+        }
+        
+        .box1 {
+            transition: background-color 0.5s ease-in-out, width 1s ease-in;
+        }
+        
+        .box1:hover {
+            background-color: #ffab91;
+            width: 300px;
+        }
+        
+        .box2 {
+            color: #87bf0d;
+            height: 150px;
+            background-color: rgb(109, 73, 143);
+            
+        }
+        
+        .box2:hover {
+            height: 250px;
+            transition: height 0.6s ease-out, color 0.6s ease-out,background-color 0.6s ease-out;
+            color: #490079;
+            background-color:#87bf0d;
+        }
+        
+        
+        .box3 {
+            transition: background-color 4s 
+            transform 0.5s ;
+        }
+        
+        .box3:hover {
+            background-color: #26ae01;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transitions Demonstration</h1>
+
+    <div class="container">
+        <div class="box box1">
+            <p>Hover over me (background-color, width)</p>
+        </div>
+        <div class="box box2">
+            <p>Hover over me (height, color)</p>
+        </div>
+        <div class="box box3">
+            <p>Hover over me (delayed transition)</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+        }
+        
+        .styled-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .radio-button{
+            margin-bottom: 20px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4caf50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Validation styles */
+        input:invalid {
+            border-color: #ff6666;
+        }
+        
+        input:invalid:focus {
+            border-color: #ff3333;
+            box-shadow: 0 0 8px rgba(255, 51, 51, 0.5);
+        }
+    </style>
+</head>
+<body>
+   
+        <h1>Form Elements Styling Demonstration</h1>
+    
+        <form class="styled-form" action="#" method="post">
+            <!-- Text input fields -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" >
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+    
+    
+            <!-- Checkbox inputs -->
+            <label>Contact Method:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="contact-email" name="contact-method" value="email">
+                <label for="contact-email">Email</label>
+    
+                <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label>
+            </div>
+    
+            <!-- Radio button inputs -->
+            <label>Gender:</label>
+            <div class="radio-button">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+    
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+    
+            <!-- Select menu -->
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="in">India</option>
+                <option value="ca">Canada</option>
+            </select>
+    
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+    
+    
+</body>
+</html>
